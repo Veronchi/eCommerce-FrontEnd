@@ -1,6 +1,9 @@
 import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import BrandStore from "./store/BrandStore";
+import CategoryStore from "./store/CategoryStore";
+import ProductStore from "./store/ProductStore";
 import UserStore from "./store/UserStore";
 
 export const Context = createContext(null);
@@ -11,6 +14,9 @@ root.render(
     <Context.Provider
       value={{
         user: new UserStore(),
+        product: new ProductStore(),
+        brand: new BrandStore(),
+        category: new CategoryStore(),
       }}
     >
       <App />
