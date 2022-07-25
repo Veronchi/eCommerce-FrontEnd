@@ -1,0 +1,12 @@
+.title {
+  color: #fff;
+  text-decoration: none;
+}
+
+.title:hover {
+  color: #A4B8BD;
+}
+
+.nav-btn + .nav-btn {
+  margin-left: 10px;
+}
