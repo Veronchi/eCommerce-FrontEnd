@@ -9,7 +9,7 @@ import {
 import Shop from './pages/Shop'
 import Admin from './pages/Admin'
 import Basket from './pages/Basket'
-import Auth from './pages/Auth'
+import Auth from './pages/Auth/Auth'
 import ProductPage from './pages/ProductPage'
 
 
