@@ -1,0 +1,36 @@
+.auth-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.auth-card {
+  width: 600px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-title {
+  margin: 0;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.form-input + .form-input {
+  margin-top: 15px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-left: 13px;
+  text-align: center;
+}
+
+.form-link {
+  line-height: 39px;
+  text-decoration: none;
+}
