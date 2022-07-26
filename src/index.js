@@ -5,6 +5,7 @@ import BrandStore from "./store/BrandStore";
 import CategoryStore from "./store/CategoryStore";
 import ProductStore from "./store/ProductStore";
 import UserStore from "./store/UserStore";
+import "./style.css"
 
 export const Context = createContext(null);
 
