@@ -1,0 +1,13 @@
+.card-container {
+  margin: 0;
+}
+
+.brand-card {
+  width: auto;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.brand-card + .brand-card {
+  margin-left: 10px;
+}
