@@ -1,0 +1,15 @@
+.product-card {
+  width: 150px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.product-img {
+  width: 150px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.card-info {
+  color: #9CA1AD;
+}

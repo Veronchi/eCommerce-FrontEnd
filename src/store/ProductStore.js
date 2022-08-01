@@ -17,6 +17,27 @@ export default class ProductStore {
         rating: 5,
         img: "https://static.1k.by/images/products/ip/big/ppe/9/4433776/ib5b20873e.png",
       },
+      {
+        id: 3,
+        name: "SamsungA54",
+        price: 300,
+        rating: 5,
+        img: "https://static.1k.by/images/products/ip/big/ppe/9/4433776/ib5b20873e.png",
+      },
+      {
+        id: 4,
+        name: "SamsungA55",
+        price: 300,
+        rating: 5,
+        img: "https://static.1k.by/images/products/ip/big/ppe/9/4433776/ib5b20873e.png",
+      },
+      {
+        id: 5,
+        name: "SamsungA55",
+        price: 300,
+        rating: 5,
+        img: "https://static.1k.by/images/products/ip/big/ppe/9/4433776/ib5b20873e.png",
+      },
     ];
     makeAutoObservable(this);
   }
