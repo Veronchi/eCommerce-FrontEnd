@@ -6,7 +6,7 @@ import {
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
 } from "./utils/consts";
-import Shop from './pages/Shop'
+import Shop from './pages/Shop/Shop'
 import Admin from './pages/Admin'
 import Basket from './pages/Basket'
 import Auth from './pages/Auth/Auth'
