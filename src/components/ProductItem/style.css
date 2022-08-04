@@ -1,15 +1,13 @@
 .product-card {
-  width: 150px;
+  width: 220px;
   cursor: pointer;
   margin-top: 10px;
 }
 
 .product-img {
-  width: 150px;
-  height: 180px;
   margin-bottom: 10px;
 }
 
 .card-info {
-  color: #9CA1AD;
+  color: #9ca1ad;
 }
