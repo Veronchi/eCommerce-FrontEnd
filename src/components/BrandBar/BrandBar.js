@@ -8,11 +8,12 @@ const BrandBar = observer(() => {
   const { brand } = useContext(Context);
 
   return (
-    <Row className="card-container">
+    <Row className="card-container" as={"ul"}>
       {brand.brands.map((item) => {
         return (
           <Card
             className="brand-card"
+            as={"li"}
             key={item.id}
             onClick={() => brand.setSelectedBrand(item)}
             border={item.id === brand.selectedBrand.id ? "dark" : "light"}
