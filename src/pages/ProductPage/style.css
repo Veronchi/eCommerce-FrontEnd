@@ -1,5 +1,5 @@
 .product-container {
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .img-container {
@@ -7,9 +7,8 @@
   justify-content: center;
 }
 
-.product-img {
+.product-page-img {
   width: 250px;
-  height: 300px;
 }
 
 .main-container {
@@ -51,6 +50,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 10px;
 }
 
 .desc-item {

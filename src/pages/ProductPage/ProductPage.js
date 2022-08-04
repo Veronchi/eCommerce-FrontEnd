@@ -20,7 +20,7 @@ const ProductPage = () => {
     <Container className="product-container">
       <Row>
         <Col className="img-container" md={6}>
-          <Image className="product-img" src={product.img} />
+          <Image className="product-page-img" src={product.img} />
         </Col>
         <Col className="main-container" md={6}>
           <div className="title-container">
@@ -32,7 +32,7 @@ const ProductPage = () => {
               <Image className="rating-img" src={star} />
             </div>
           </div>
-          <div>
+          <div className="desc-container">
             <h3 className="desc-title">Description:</h3>
             <ul className="desc-list">
               {description.map((info) => {
