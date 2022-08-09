@@ -16,7 +16,6 @@ function App() {
           <Route index element={<Shop />} />
           <Route path={LOGIN_ROUTE} element={<Auth />} />
           <Route path={REGISTRATION_ROUTE} element={<Auth />} />
-          <Route path={REGISTRATION_ROUTE} element={<Auth />} />
           <Route path={`${PRODUCT_ROUTE}/:id`} element={<ProductPage />} />
           <Route path={ADMIN_ROUTE} element={<Admin />} />
           <Route path={BASKET_ROUTE} element={<Basket />} />
