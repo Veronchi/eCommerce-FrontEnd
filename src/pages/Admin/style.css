@@ -1,0 +1,7 @@
+.admin-container {
+    padding-top: 50px;
+}
+
+.add-btn + .add-btn {
+    margin-top: 10px;
+}
