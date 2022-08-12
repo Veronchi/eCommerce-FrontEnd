@@ -1,0 +1,24 @@
+.dropdown-container {
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.dropdown + .dropdown {
+  margin-left: 20px;
+}
+
+.form-container {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  margin-bottom: 3px;
+}
+
+.property-btn {
+  margin-bottom: 8px;
+}
+
+.property-row + .property-row {
+  margin-top: 7px;
+}
