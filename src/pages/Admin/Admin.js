@@ -12,7 +12,6 @@ const Admin = () => {
 
   return (
     <Container className="admin-container d-flex justify-content-center">
-      {/* <Container className="d-flex "> */}
         <Button
           className="add-btn"
           variant={"outline-dark"}
@@ -34,7 +33,6 @@ const Admin = () => {
         >
           Add product
         </Button>
-      {/* </Container> */}
       <CreateCategoryModal
         show={isCategoryVisible}
         onHide={() => setIsCategoryVisible(false)}
