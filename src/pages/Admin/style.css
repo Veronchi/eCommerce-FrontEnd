@@ -1,7 +1,11 @@
 .admin-container {
-    padding-top: 50px;
+  padding-top: 100px;
+}
+
+.add-btn {
+  line-height: 45px;
 }
 
 .add-btn + .add-btn {
-    margin-top: 10px;
+  margin-left: 50px;
 }

@@ -11,28 +11,30 @@ const Admin = () => {
   const [isProductVisible, setIsProductVisible] = useState(false);
 
   return (
-    <Container className="admin-container d-flex flex-column">
-      <Button
-        className="add-btn"
-        variant={"outline-dark"}
-        onClick={() => setIsCategoryVisible(true)}
-      >
-        Add cotegory
-      </Button>
-      <Button
-        className="add-btn"
-        variant={"outline-dark"}
-        onClick={() => setIsBrandVisible(true)}
-      >
-        Add brand
-      </Button>
-      <Button
-        className="add-btn"
-        variant={"outline-dark"}
-        onClick={() => setIsProductVisible(true)}
-      >
-        Add product
-      </Button>
+    <Container className="admin-container d-flex justify-content-center">
+      {/* <Container className="d-flex "> */}
+        <Button
+          className="add-btn"
+          variant={"outline-dark"}
+          onClick={() => setIsCategoryVisible(true)}
+        >
+          Add cotegory
+        </Button>
+        <Button
+          className="add-btn"
+          variant={"outline-dark"}
+          onClick={() => setIsBrandVisible(true)}
+        >
+          Add brand
+        </Button>
+        <Button
+          className="add-btn"
+          variant={"outline-dark"}
+          onClick={() => setIsProductVisible(true)}
+        >
+          Add product
+        </Button>
+      {/* </Container> */}
       <CreateCategoryModal
         show={isCategoryVisible}
         onHide={() => setIsCategoryVisible(false)}
