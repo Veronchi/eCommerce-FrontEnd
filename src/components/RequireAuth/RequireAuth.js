@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { Context } from "../..";
+import { useStore } from "../../hook/useStore";
 import { LOGIN_ROUTE } from "../../utils/consts";
 
 const RequireAuth = ({ children }) => {
-  const { user } = useContext(Context);
+  const { user } = useStore();
   const location = useLocation();
 
   if (!user.isAuth) {

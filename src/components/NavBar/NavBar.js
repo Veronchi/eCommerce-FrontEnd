@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { Context } from "../..";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,10 +7,11 @@ import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../../
 import { Button } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import { useNavigate } from "react-router-dom";
+import { useStore } from "../../hook/useStore";
 import "./style.css";
 
 const NavBar = observer(() => {
-  const { user } = useContext(Context);
+  const { user } = useStore();
   const navigate = useNavigate();
 
   return (

@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
+import React from "react";
 import { Card, Row } from "react-bootstrap";
-import { Context } from "../..";
+import { useStore } from "../../hook/useStore";
 import "./style.css";
 
 const BrandBar = observer(() => {
-  const { brand } = useContext(Context);
+  const { brand } = useStore();
 
   return (
     <Row className="card-container" as={"ul"}>

@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
-import { Context } from "../..";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./style.css";
+import { useStore } from "../../hook/useStore";
 
 const CategoryBar = observer(() => {
-  const { category } = useContext(Context);
+  const { category } = useStore();
 
   return (
     <ListGroup as="ul">

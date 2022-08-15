@@ -1,12 +1,12 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
-import { Context } from "../..";
+import React from "react";
 import { Row } from "react-bootstrap";
-import "./style.css";
+import { useStore } from "../../hook/useStore";
 import ProductItem from "../ProductItem/ProductItem";
+import "./style.css";
 
 const ProductList = observer(() => {
-  const { product } = useContext(Context);
+  const { product } = useStore();
 
   return (
     <Row className="d-flex justify-content-between">

@@ -1,13 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button, Container, Col, Row } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import { Context } from "../../../index";
 import Dropdown from "react-bootstrap/Dropdown";
 import "./style.css";
+import { useStore } from "../../../hook/useStore";
 
 const CreateProductModal = ({ show, onHide }) => {
-  const { category, brand } = useContext(Context);
+  const { category, brand } = useStore();
   const [info, setInfo] = useState([]);
 
   const addInfo = () => {
