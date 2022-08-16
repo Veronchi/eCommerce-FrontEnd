@@ -2,57 +2,56 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
-import { ADMIN_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../../utils/consts";
-import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import {
+  ADMIN_ROUTE,
+  LOGIN_ROUTE,
+  REGISTRATION_ROUTE,
+  SHOP_ROUTE,
+} from "../../utils/consts";
 import { observer } from "mobx-react-lite";
-import { useNavigate } from "react-router-dom";
 import { useStore } from "../../hook/useStore";
 import "./style.css";
 
 const NavBar = observer(() => {
   const { user } = useStore();
-  const navigate = useNavigate();
 
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
-        <NavLink className="title" to={SHOP_ROUTE}>
+        <Link className="title" to={SHOP_ROUTE}>
           Shop
-        </NavLink>
+        </Link>
         {user.isAuth ? (
           <Nav className="ml-auto">
-            <Button
-              className="nav-btn"
-              variant={"outline-light"}
-              onClick={() => navigate(ADMIN_ROUTE)}
+            <Link
+              className="nav-link"
+              to={ADMIN_ROUTE}
             >
               Admin
-            </Button>
-            <Button
-              className="nav-btn"
-              variant={"outline-light"}
-              onClick={() => navigate(LOGIN_ROUTE)}
+            </Link>
+            <Link
+              className="nav-link"
+              to={LOGIN_ROUTE}
             >
               Exit
-            </Button>
+            </Link>
           </Nav>
         ) : (
           <Nav className="ml-auto">
-            <Button
-              className="nav-btn"
-              variant={"outline-light"}
-              onClick={() => navigate(REGISTRATION_ROUTE)}
+            <Link
+              className="nav-link"
+              to={REGISTRATION_ROUTE}
             >
               Sign up
-            </Button>
-            <Button
-              className="nav-btn"
-              variant={"outline-light"}
+            </Link>
+            <Link
+              className="nav-link"
               onClick={() => user.setIsAuth(true)}
+              to={SHOP_ROUTE}
             >
               Sign in
-            </Button>
+            </Link>
           </Nav>
         )}
       </Container>

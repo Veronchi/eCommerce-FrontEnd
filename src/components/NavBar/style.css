@@ -7,6 +7,6 @@
   color: #A4B8BD;
 }
 
-.nav-btn + .nav-btn {
+.nav-link + .nav-link {
   margin-left: 10px;
 }
