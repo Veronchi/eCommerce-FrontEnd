@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LOGIN_ROUTE, REGISTRATION_ROUTE } from "../../utils/consts";
 import "./style.css";
 
@@ -20,13 +20,13 @@ const Auth = () => {
           <Form.Control className="form-input" placeholder="Password" />
           <div className="btn-container">
             {isLogin ? (
-              <NavLink className="form-link" to={REGISTRATION_ROUTE}>
+              <Link className="form-link" to={REGISTRATION_ROUTE}>
                 Create account
-              </NavLink>
+              </Link>
             ) : (
-              <NavLink className="form-link" to={LOGIN_ROUTE}>
+              <Link className="form-link" to={LOGIN_ROUTE}>
                 Sign in
-              </NavLink>
+              </Link>
             )}
 
             <Button className="form-btn" variant={"outline-success"}>
