@@ -5,7 +5,7 @@ import "./style.css";
 export const Spinner = () => {
   return (
     <Container className="vh-100 d-flex justify-content-center align-items-center">
-      <div class="spinner">
+      <div className="spinner">
         <div></div>
         <div></div>
         <div></div>
