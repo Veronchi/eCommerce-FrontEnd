@@ -16,6 +16,12 @@ import "./style.css";
 const NavBar = observer(() => {
   const { user } = useStore();
 
+  const logOut = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+    localStorage.removeItem("token");
+  }
+
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
@@ -32,7 +38,8 @@ const NavBar = observer(() => {
             </Link>
             <Link
               className="nav-link"
-              to={LOGIN_ROUTE}
+              onClick={logOut}
+              to={SHOP_ROUTE}
             >
               Exit
             </Link>
@@ -47,8 +54,7 @@ const NavBar = observer(() => {
             </Link>
             <Link
               className="nav-link"
-              onClick={() => user.setIsAuth(true)}
-              to={SHOP_ROUTE}
+              to={LOGIN_ROUTE}
             >
               Sign in
             </Link>
