@@ -32,10 +32,9 @@ export const createProduct = async (product) => {
 
 export const fetchProducts = async () => {
   const { data } = await $host.get("api/product");
-  return data.rows.map((item) => ({
-    ...item,
-    img: `${process.env.REACT_APP_API_URL}/${item.img}`,
-  }));
+  return data.rows.map((item) => {
+    return { ...item, img: `${process.env.REACT_APP_API_URL}/${item.img}` };
+  });
 };
 
 export const fetchOneProduct = async (id) => {
