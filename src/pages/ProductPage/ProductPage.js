@@ -1,26 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Image, Row, Button } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import { fetchOneProduct } from "../../http/productAPI";
 import star from "../../assets/star.svg";
 import "./style.css";
 
 const ProductPage = () => {
-  const product = {
-    id: 1,
-    name: "SamsungA52",
-    price: 300,
-    rating: 5,
-    img: "https://static.1k.by/images/products/ip/big/ppe/9/4433776/ib5b20873e.png",
-  };
-  const description = [
-    { id: 1, title: "Memory Storage", description: "128 GB" },
-    { id: 2, title: "Operating System", description: "Android" },
-  ];
+  const [product, setProduct] = useState({ info: [] });
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetchOneProduct(id).then((data) => setProduct(data));
+  }, []);
 
   return (
     <Container className="product-container">
       <Row>
         <Col className="img-container" md={6}>
-          <Image className="product-page-img" src={product.img} />
+          <Image
+            className="product-page-img"
+            src={`${process.env.REACT_APP_API_URL}/${product.img}`}
+          />
         </Col>
         <Col className="main-container" md={6}>
           <div className="title-container">
@@ -35,7 +35,7 @@ const ProductPage = () => {
           <div className="desc-container">
             <h3 className="desc-title">Description:</h3>
             <ul className="desc-list">
-              {description.map((info) => {
+              {product.info.map((info) => {
                 return (
                   <li className="desc-item" key={info.id}>
                     {info.title}: {info.description}
