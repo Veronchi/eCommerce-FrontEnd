@@ -19,7 +19,7 @@ const Shop = observer(() => {
     fetchCategory().then((data) => category.setCategories(data));
     fetchBrand().then((data) => brand.setBrands(data));
     fetchProducts().then((data) => product.setProducts(data));
-  }, [category, brand, product]);
+  }, []);
 
   return (
     <Container className="shop-container">
