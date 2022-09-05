@@ -26,12 +26,11 @@ const App = observer(() => {
   useEffect(() => {
     check()
       .then((data) => {
-        user.setUser(data)
+        user.setUser(data);
         user.setIsAuth(true);
       })
       .finally(() => setIsLoading(false));
-      
-  }, [user]);
+  }, []);
 
   if (isLoading) {
     return <Spinner />;
