@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Image, Row, Button } from "react-bootstrap";
+import { Col, Container, Image, Row, Button, Table } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { fetchOneProduct } from "../../http/productAPI";
 import star from "../../assets/star.svg";
@@ -32,24 +32,26 @@ const ProductPage = () => {
               <Image className="rating-img" src={star} />
             </div>
           </div>
-          <div className="desc-container">
-            <h3 className="desc-title">Description:</h3>
-            <ul className="desc-list">
-              {product.info.map((info) => {
-                return (
-                  <li className="desc-item" key={info.id}>
-                    {info.title}: {info.description}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
           <div className="price-container">
             <h3>{product.price}$</h3>
             <Button variant={"outline-dark"}>Add to cart</Button>
           </div>
         </Col>
+        <div className="desc-container">
+          <h3 className="desc-title">Description:</h3>
+          <Table striped>
+            <tbody>
+              {product.info.map((info) => {
+                return (
+                  <tr className="desc-item" key={info.id}>
+                    <td>{info.title}</td>
+                    <td>{info.description}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </Table>
+        </div>
       </Row>
     </Container>
   );
